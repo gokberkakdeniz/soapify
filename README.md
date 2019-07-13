@@ -1,13 +1,5 @@
 # soapify - search on all spotify playlists
-    λ py soap.py "Blue Foundation" --where artist
-    > G1
-    Blue Foundation - Shine
-    > mutlak huzur
-    > 404.genre_not_found.err
-    > icrievrytiem
-    Blue Foundation - Bonfires
-    Blue Foundation - As I Moved On
-    ...
+[![asciicast](https://asciinema.org/a/kGK0UooHleh4KBWPhvYalyEd0.svg)](https://asciinema.org/a/kGK0UooHleh4KBWPhvYalyEd0)
 
 ## installation
     pip install soapify
