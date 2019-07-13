@@ -1,4 +1,4 @@
-# soap - search on all (spotify) playlists
+# soapify - search on all spotify playlists
     λ py soap.py "Blue Foundation" --where artist
     > G1
     Blue Foundation - Shine
@@ -8,13 +8,17 @@
     Blue Foundation - Bonfires
     Blue Foundation - As I Moved On
     ...
+
+## installation
+    pip install soapify
+
 ## requirements
 - python3
     - click
     - spotipy
 ## usage
-    λ py soap.py --help
-    -Usage: soap.py [OPTIONS] TEXT
+    λ soapify --help
+    -Usage: soapify [OPTIONS] TEXT
 
     Filter your all Spotify playlists
 
