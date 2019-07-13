@@ -1,2 +1,7 @@
 lib/__pycache__/
 .cache-*
+dist/
+build/
+*.pyc
+/*.egg-info
+/*.egg

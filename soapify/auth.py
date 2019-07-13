@@ -43,7 +43,7 @@ class CallbackServer():
             query = urlparse(self.path).query
             code = parse_qs(query).get("code")
             self.outer.code = code[0] if not code == None else ""
-            self.wfile.write(bytes("OK", "utf-8"))
+            self.wfile.write(bytes("Authorization successful. You can close this window.", "utf-8"))
     
     def __init__(self):
         httpd = http.server.HTTPServer(("", self.port), partial(self.HTTPHandler, outer=self))

@@ -1,5 +1,5 @@
 import spotipy
-import lib.auth
+import soapify.auth
 
 class Gatherer():
     def __init__(self, username, client_id, client_secret):
@@ -7,7 +7,7 @@ class Gatherer():
             raise Exception("Username, Client ID and Client Secret are required!")
         
         self.username = username
-        token = lib.auth.get_token(username=username,
+        token = soapify.auth.get_token(username=username,
                                 client_id=client_id, 
                                 client_secret=client_secret, 
                                 redirect_uri="http://localhost:1337",
