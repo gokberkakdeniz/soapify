@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import spotipy
 import click
 import os
