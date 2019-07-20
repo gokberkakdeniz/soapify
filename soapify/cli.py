@@ -31,5 +31,3 @@ def main(text, where, username, client_id, client_secret, case_sensitive):
 
 if __name__ == "__main__":
     main()
-
-    

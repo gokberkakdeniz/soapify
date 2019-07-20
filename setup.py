@@ -6,8 +6,10 @@ def readme():
 
 setuptools.setup(
     name='soapify',  
-    version='1.0.0',
-    scripts=['bin/soapify'] ,
+    version='1.0.1',
+    entry_points = {
+        "console_scripts": ['soapify = soapify.cli:main']
+    },
     author="tncga",
     author_email="qokberk_akdeniz@hotmail.com",
     description="search on your all spotify playlists",
