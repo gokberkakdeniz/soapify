@@ -6,7 +6,7 @@ def readme():
 
 setuptools.setup(
     name='soapify',  
-    version='1.0.1',
+    version='1.0.2',
     entry_points = {
         "console_scripts": ['soapify = soapify.cli:main']
     },

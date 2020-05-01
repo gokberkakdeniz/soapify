@@ -21,4 +21,4 @@
     -secret, --client-secret TEXT   Spotify client secret
     --help                          Show this message and exit.
 
-Note: `--username`, `--client-id`, and `--client-secret` are not required if environment variables (`SPOTIFY_USERNAME`, `SPOTIFY_CLIENT_ID`, and `SPOTIFY_CLIENT_SECRET`) are defined.
+Note: `--username`, `--client-id`, and `--client-secret` are not required if environment variables (`SPOTIPY_USERNAME`, `SPOTIPY_CLIENT_ID`, and `SPOTIPY_CLIENT_SECRET`) are defined.

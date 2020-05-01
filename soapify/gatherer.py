@@ -8,10 +8,10 @@ class Gatherer():
         
         self.username = username
         token = soapify.auth.get_token(username=username,
-                                client_id=client_id, 
-                                client_secret=client_secret, 
-                                redirect_uri="http://localhost:1337",
-                                scope="playlist-read-private")
+                                       client_id=client_id, 
+                                       client_secret=client_secret, 
+                                       redirect_uri="http://localhost:1337",
+                                       scope="playlist-read-private")
         if token == None:
             raise Exception("Could not get token!")
         self.sp = spotipy.Spotify(auth=token)

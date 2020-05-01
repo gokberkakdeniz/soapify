@@ -1,20 +1,25 @@
 import http.server
 import spotipy.util
+from spotipy.oauth2 import SpotifyOAuth
 from urllib.parse import urlparse, parse_qs
 from functools import partial
 from multiprocessing.pool import ThreadPool
+import webbrowser
+from os import getenv
 
 def get_token(username, client_id, client_secret, redirect_uri, scope):
-    sp_oauth = spotipy.util.oauth2.SpotifyOAuth(client_id=client_id, 
-        client_secret=client_secret, 
-        redirect_uri=redirect_uri,
-        scope=scope,
-        cache_path=".cache-"+username)
+    sp_oauth = SpotifyOAuth(username=username,
+                            client_id=client_id, 
+                            client_secret=client_secret, 
+                            redirect_uri=redirect_uri,
+                            scope=scope,
+                            cache_path=getenv("HOME") + "/.cache/soapify-"+username)
+
     token_info = sp_oauth.get_cached_token()
     token = None
     if not token_info:
         auth_url = sp_oauth.get_authorize_url()
-        spotipy.util.webbrowser.open(auth_url)
+        webbrowser.open(auth_url)
         pool = ThreadPool(processes=1)
         code = pool.apply_async(CallbackServer).get().get_token()
         token_info = sp_oauth.get_access_token(code)
